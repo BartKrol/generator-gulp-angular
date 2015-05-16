@@ -30,8 +30,8 @@ function browserSyncInit(baseDir, browser) {
     routes: routes
   };
 
-  if(middleware.length > 0) {
-    server.middleware = middleware;
+  if(middleware().length > 0) {
+    server.middleware = middleware();
   }
 
   browserSync.instance = browserSync.init({
